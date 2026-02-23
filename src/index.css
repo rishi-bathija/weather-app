@@ -1,0 +1,31 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", "Geist", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-indigo-950 via-blue-900 to-slate-950 text-white min-h-screen antialiased selection:bg-blue-500/30;
+    margin: 0;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-white/10 border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.3)] rounded-3xl overflow-hidden transition-all duration-300;
+  }
+
+  .glass-morphism {
+    @apply backdrop-blur-md bg-white/5 border border-white/10 shadow-inner;
+  }
+}
+
+/* Custom Scrollbar for horizontal forecast */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
